@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #92855f;
+    padding: 20px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+}
+.line1 {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+.line2 {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: blue;
+}
+.line3 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: blue;
+}
+.line11 {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+.color {
+    color: yellow;
+}
+.color1 {
+    color: rgb(170, 45, 45);
+}
+.clear {
+    clear: both;
+    line-height: 0;
+    height: 0;
+}
+.box1 {
+    width: 50%;
+    height: 100px;
+    background-color: #fff2cc;
+    float: left;
+}
+.box2 {
+    width: 100%;
+    height: 100%;
+    background-color: #d4e8d5;
+    padding: 10px;
+    float:left;
+}
+.box3 {
+    width: 100%;
+    height: 100;
+    background-color: #f5ac11;
+}
+.box4 {
+    width: 100%; 
+    background-color: #fff2cc;
+    text-align: left; 
+    padding: 10px; 
+}
+.box5{
+    width: 100%; 
+    height: 40%;
+    background-color: #d4e8d5;
+    text-align: right; 
+    float: left;
+
+}
+.x-clear {
+    clear: both;
+    line-height: 0;
+    height: 0;
+}
+#x-frame {
+    width: 150px;
+    background: #fff2cc;
+    margin: 0 auto;
+}
+p {
+    margin: 5px 0 15px;
+}
