@@ -1,43 +1,113 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Basic Lab</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            padding: 20px;
+            margin: 0;
+            display: flex;
         }
-        h1, h2, h3, h4, h5, h6 {
+        nav {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            height: 100vh;
+        }
+        nav a {
+            display: block;
+            color: #333;
+            text-decoration: none;
             margin: 10px 0;
         }
-        .line1 {
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-    
+        nav a:hover {
+            color: #007BFF;
         }
-        .line2{
-
-            font-family: Arial, sans-serif;
-            font-size: 18px;
+        main {
+            flex: 1;
+            padding: 20px;
         }
-        .line3{
-
-            font-family: Arial, sans-serif;
-            font-size: 24px;
+        header {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007BFF;
+            color: white;
         }
-        .line11 {
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-    
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f4f4f4;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
-        p {
-            margin: 5px 0 15px;
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 10px;
         }
     </style>
-    <head>
-        <b><span class="line3">About Me</span></b>
-    </head>
-        <body>
-            <br>This is the About me page. Here, you can add you personal information, background, and interests. </br>
-            <br><a href="index.html">Back Home</a></br>
-        </body>
+</head>
+<body>
+    <nav>
+        <center><n1><a href="index.html">Home</a>
+        <a href="mycat.html">My Cat</a>
+        <a href="hobby.html">My Hobby</a></center>
+        <!-- nav menu here -->
+
+    </nav>
+    <main>
+<!-- main here -->
+
+<header>
+    <h1>About Me</h1>
+    
+</header>
+<br><center><img src="/lab3/about.jpg" width="20%"></img></br>
+<br>Hi my name is Borwonrat.</br></center>
+
+</main>
+<footer>
+    <center>Contact Me: <a href="">example@example.com</a>
+        <br>Follow me on: <a href="">Twiter </a>| <a href="">Facebook</a>| <a href="">LinkedIn</a>
+        <br>©2024 My Lab</center><br>
+</footer>
+
+<a href="about1.html" class="next-button">Next</a>
+<a href="index.html" class="back-button">Back</a>
+
+<style>
+    .next-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .next-button:hover {
+        background-color: #0056b3;
+    }
+    .back-button {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .next-button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</body>
 </html>
