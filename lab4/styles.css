@@ -1,0 +1,151 @@
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+        background-color: #1e293b;
+        color: white;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .hero-main-text{
+        font-size: 48px;
+        font-weight: 900;
+        color: #f9faf8;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 50px;
+        background-color: #1e293b;
+        color: white;
+    }
+
+    .hero-text {
+        max-width: 500px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #d1d5db;
+    }
+
+    .hero-text button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .hero-image {
+        width: 400px;
+        height: 200px;
+        background-color: #64748b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+    }
+
+    .info-section {
+        padding: 50px;
+        text-align: center;
+    }
+
+    .info-section h2 {
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+
+    .info-boxes {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .info-box {
+        width: 150px;
+        border: 2px solid #007bff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .info-box img {
+        width: 150px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .info-box p {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .testimonial {
+        padding: 50px;
+        background-color: #e5e7eb;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .cta-section {
+        padding: 50px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+    }
+
+    .cta-section button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: white;
+        color: #007bff;
+        border: none;
+        border-radius: 5px;
+    }
+
+ 
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #1e293b;
+        color: white;
+    }
