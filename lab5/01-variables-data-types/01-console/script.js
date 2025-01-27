@@ -1,0 +1,14 @@
+console.log("Mornig!");
+console.log(100);
+console.log('A');
+console.log(98.25);
+console.log(5*4);
+console.log("Morning! " + "Borwon");
+const x = 20;
+const z = 2;
+console.log(x);
+console.log(z);
+const k = (x+z);
+console.log(k);
+console.error('Alert');
+console.warn('Warning');
