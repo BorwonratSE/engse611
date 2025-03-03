@@ -1,14 +1,30 @@
-console.log("Mornig!");
+// Log number
 console.log(100);
-console.log('A');
-console.log(98.25);
-console.log(5*4);
-console.log("Morning! " + "Borwon");
-const x = 20;
-const z = 2;
+
+// Log string
+console.log('Hello World');
+
+// Log multiple values
+console.log(20, 'Hello', true);
+
+// Log a variable
+const x = 100;
 console.log(x);
-console.log(z);
-const k = (x+z);
-console.log(k);
+
+// Console error & warning
 console.error('Alert');
 console.warn('Warning');
+
+// Log object as table
+console.table({ name: 'Brad', email: 'brad@gmail.com' });
+
+// Group console commands
+console.group('simple');
+console.log(x);
+console.error('Alert');
+console.warn('Warning');
+console.groupEnd();
+
+// Add CSS to logs
+const styles = 'padding: 10px; background-color: white; color: green';
+console.log('%cHello World', styles);

@@ -1,8 +1,10 @@
-//Pim prad
+// This is a single line of code
 
-/*Tread
+/*
+Multi-line comment
 console.log(100);
 
-console.log("Hello");
+console.log('Hello World');
 
-console.log(24, 'Welcome Back', treue);*/
+console.log(20, 'Hello', true);
+*/
