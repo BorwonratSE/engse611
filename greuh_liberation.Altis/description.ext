@@ -1,0 +1,210 @@
+respawn = 3;
+respawndelay = 5;
+disabledAI = true;
+
+enableDebugConsole = 1;
+allowFunctionsLog = 0;
+
+loadScreen="res\liberation.jpg";
+onLoadMission = $STR_MISSION_TITLE;
+author = "[GREUH] Zbug, [GREUH] McKeewa";
+onLoadName = $STR_MISSION_TITLE;
+
+joinUnassigned = 0;
+
+
+
+corpseManagerMode = 1;
+corpseLimit = 20;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 120;
+wreckManagerMode = 1;
+wreckLimit = 20;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 600;
+minPlayerDistance = 1000;
+
+
+class Header
+{
+	gameType = CTI;
+	minPlayers = 1;
+	maxPlayers = 41;
+};
+
+#include "GREUH\UI\GREUH_interface.hpp"
+#include "ui\liberation_interface.hpp"
+#include "ui\liberation_notifications.hpp"
+#include "ui\mission_params.hpp"
+#include "scripts\GOM\dialogs\GOM_dialog_parents.hpp"
+#include "scripts\GOM\dialogs\GOM_dialog_controls.hpp"
+
+//--------------------------------------------------------------
+//------------------------AIS INJURY----------------------------
+//--------------------------------------------------------------
+class CfgFunctions {
+#include "AIS\cfgFunctions.hpp"
+#include "scripts\GOM\functions\GOM_fnc_functions.hpp"
+};
+#include "AIS\Effects\BarDlg.hpp"
+//------------------------------------------
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title =	$STR_SORRY;
+		subtitle = "";
+		description = $STR_COMMANDER_NOT_AUTHORIZED;
+		pictureBackground = "";
+	};
+    
+    class End2
+    {
+        title =	$STR_NOTALLOW;
+		subtitle = "";
+		description = $STR_COMMANDER_NOT_ALLOW;
+		pictureBackground = "";
+
+    };
+};
+
+
+class CfgCommunicationMenu
+{
+    class missileBomb
+    {
+        text = "Call CruiseMissile";
+        expression = "[] spawn fnc_CruiseMissile"
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+	class clustermissileBomb
+    {
+        text = "Call ClusterMissile";
+        expression = "[] spawn fnc_ClusterMissile";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+    class fn_uav
+    {
+        text = "Spawn Greyhawk";
+        expression = "[] spawn fnc_uav";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+    class fn_230mm
+    {
+        text = "Call 230MM";
+        expression = "[] spawn fnc_230mm";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+     class fnc_g500
+    {
+        text = "Call GBU12";
+        expression = "[] spawn fnc_g500";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+	class mytank
+    {
+        text = "Call Airdrop (M2A4 Slammer UP)";
+        expression = "[] spawn fnc_vehicledrop";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+	class fight
+    {
+        text = "Spawn Fighter Jet (F/A-181 Black Wasp II)";
+        expression = "[] spawn fnc_fighter";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+	class cas_1
+    {
+        text = "Spawn Fighter CAS (A-164 Wipeout)";
+        expression = "[] spawn fnc_cas1";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+	class cas_2
+    {
+        text = "Spawn Fighter CAS (A-164 Wipeout)";
+        expression = "[] spawn fnc_cas2";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+	class fight2
+    {
+        text = "Spawn Fighter Jet (F/A-181 Black Wasp II)";
+        expression = "[] spawn fnc_htransport";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+	class hcas
+    {
+        text = "Spawn Gunship (AH-99 Blackfoot)";
+        expression = "[] spawn fnc_hcas";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
+        removeAfterExpressionCall = 0;
+		
+    };
+
+	class mobile
+    {
+        text = "Call Airdrop (MobileSpawn)";
+        expression = "[] spawn fnc_mobile";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
+        removeAfterExpressionCall = 0;
+		
+    };
+
+    class service
+    {
+        text = "Call Airdrop (Offroad Services)";
+        expression = "[] spawn fnc_service";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
+        removeAfterExpressionCall = 0;
+		
+    };
+
+    class hunter
+    {
+        text = "Call Airdrop (IFV-6c Panther)";
+        expression = "[] spawn fnc_hunter";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
+        removeAfterExpressionCall = 0;
+		
+    };
+
+    class buzz
+    {
+        text = "Spawn Fighter Jet (A-143 Buzzard (CAS))";
+        expression = "[] spawn fnc_buzz";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
+        removeAfterExpressionCall = 0;
+    };
+
+	class riffleman
+	{
+		text = "Call Airdrop (Offroad)";
+        expression = "[] spawn fnc_riffle";
+        icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa";
+        removeAfterExpressionCall = 0;
+	};
+
+    #include "scripts\GOM\functions\GOM_fnc_aircraftLoadoutMenu.hpp"
+
+
+};
